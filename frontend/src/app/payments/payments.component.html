@@ -1,0 +1,39 @@
+<div class="container">
+  <span class="digit-code">YOUR CODE : {{ receivedData?.code }}</span>
+
+  <div class="inputs">
+    <input
+      type="text"
+      id="payment"
+      placeholder="Payment"
+      [(ngModel)]="payment"
+    />
+
+    <input
+      type="number"
+      id="ammount"
+      placeholder="Amount"
+      [(ngModel)]="amount"
+    />
+    <button (click)="addPayment()">+ ADD</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Payment</th>
+        <th>Amount</th>
+        <th>Code</th>
+        <th>Grid</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let payment of payments">
+        <td>{{ payment.payment }}</td>
+        <td>{{ payment.amount }}</td>
+        <td>{{ payment.code }}</td>
+        <td>100</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

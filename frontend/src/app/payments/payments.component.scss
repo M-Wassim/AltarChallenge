@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  width: 80%;
+  margin: auto;
+
+  .inputs {
+    width: 80%;
+
+    margin-top: 20px;
+    label {
+      font-size: 14px;
+      color: #8a9da4;
+    }
+    input {
+      margin-left: 20px;
+
+      width: 100px;
+      height: 30px;
+    }
+    button {
+      margin-left: 40px;
+      background-color: #8a9da4;
+      color: white;
+      border: none;
+      padding: 10px 10px;
+      cursor: pointer;
+    }
+  }
+}
+
+.digit-code {
+  border: 1px solid grey;
+  padding: 5px 20px;
+  font-size: 18px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: 30px;
+  width: 70%;
+  td {
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+  }
+}

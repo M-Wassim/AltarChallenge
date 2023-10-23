@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="top">
+    <div class="char">
+      <label for="inputChar">CHARACTER</label>
+      <input
+        type="text"
+        id="inputChar"
+        placeholder="Character"
+        [maxLength]="1"
+        [formControl]="inputChar"
+      />
+      <span class="errorMsg" *ngIf="inputChar.errors"
+        >only alphabétiques are allowed</span
+      >
+    </div>
+    <p>
+      {{ timer | date : "HH:mm:ss" }}
+    </p>
+
+    <button (click)="generateGrid()" class="generate-button">
+      GENERATE 2D GRID
+    </button>
+  </div>
+
+  <table class="center">
+    <tr *ngFor="let row of gridData">
+      <td *ngFor="let cell of row">
+        {{ cell }}
+      </td>
+    </tr>
+  </table>
+
+  <span class="live">Live</span>
+  <span class="digit-code">YOUR CODE : {{ digitCode }}</span>
+</div>
